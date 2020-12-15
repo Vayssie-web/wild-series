@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Categorie{% endblock title %}
+   
+{% block body %}
+      <div>
+         <h2>{{ category.name }} Titre:</h2>
+         {% for program in programs %}
+            <p>{{ program.title }}</p>
+         {% endfor %}
+      </div>
+
+   <a href="{{ path('app_index') }}">
+      Retour à l'accueil
+   </a>
+{% endblock body %}
